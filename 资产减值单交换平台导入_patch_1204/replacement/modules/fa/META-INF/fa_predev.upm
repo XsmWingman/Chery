@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+    
+<module name="fa">
+    <public>
+<!-- 减值单外部交换平台 -->
+        <component priority="0" singleton="true" remote="true" tx="CMT" supportAlias="false">
+            <interface>nc.itf.fa.prv.IPredevaluateImport</interface>
+            <implementation>nc.impl.fa.predevaluate.PredevaluateImportImpl</implementation>
+        </component>
+    </public>
+
+    <private>
+    
+    </private>
+</module>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding='gb2312'?>
+<businessprocessors>
+    <businessprocessor baseclassname="" billtype="HE" classname="nc.impl.pfxx.plugins.EvaluatePlugin" locklevel="3" metadataid="98410bd3-e112-4d96-8b12-d6559f240925" name="资产评估">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="he" classname="nc.impl.pfxx.plugins.EvaluatePlugin" locklevel="3" metadataid="98410bd3-e112-4d96-8b12-d6559f240925" name="资产评估">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="HF" classname="nc.impl.pfxx.plugins.ReducePlugin" locklevel="3" metadataid="ac7bd927-8af1-453b-8315-f7511b8b1b34" name="资产减少">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="hf" classname="nc.impl.pfxx.plugins.ReducePlugin" locklevel="3" metadataid="ac7bd927-8af1-453b-8315-f7511b8b1b34" name="资产减少">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="H1" classname="nc.impl.pfxx.plugins.AssetPlugin" locklevel="3" metadataid="8a1677c1-20f7-42ce-8798-24c74b7752de" name="资产卡片">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="HG" classname="nc.impl.pfxx.plugins.AlterPlugin" locklevel="3" metadataid="3f32e1fd-660a-4d9e-8497-b0c01a5d2654" name="资产变动">
+    </businessprocessor>
+    <businessprocessor baseclassname="" billtype="ZCLB" classname="nc.impl.pfxx.plugins.CategoryPlugin" locklevel="3" metadataid="e681473c-5fb5-4aad-b14d-5a3db593bd64" name="资产类别">
+    </businessprocessor> 
+    <businessprocessor baseclassname="" billtype="HQ" classname="nc.impl.pfxx.plugins.PredevaluatePlugin" locklevel="3" metadataid="4fa5f8b6-5fdf-427c-999c-fde6bfe06dd3" name="资产减值单">
+    </businessprocessor>
+</businessprocessors>
