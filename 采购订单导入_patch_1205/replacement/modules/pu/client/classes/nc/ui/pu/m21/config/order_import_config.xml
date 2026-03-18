@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean class="nc.ui.pubapp.plugin.action.InsertActionInfo">
+		<!-- actionsOfCard 或 actionsOfList -->
+		<property name="actionContainer" ref="actionsOfList" />
+		<!-- notedit 或 edit -->
+		<property name="actionType" value="notedit"/>
+		<property name="target" ref="printMenuAction"/>
+		<!-- before 或 after -->
+		<property name="pos" value="before"/>
+		<property name="action">
+			<ref bean="importExportMenu" />
+		</property>
+	</bean>
+	
+	<!-- 导入导出按钮-->
+	<bean id="importExportMenu" class="nc.funcnode.ui.action.MenuAction">
+		<property name="code" value="importExport" />
+		<property name="name" value="导入" />
+		<property name="actions">
+			<list>
+				<ref bean="ImportData" />        <!-- 导入Excel -->
+				<!-- <ref bean="ExportData" /> -->       <!-- 导出Excel -->
+				<ref bean="ExportTemplate" /> 	 <!-- 导出模板 -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- 导入Excel（根据模板填充数据） -->
+	<bean id="ImportData" class="nc.ui.uif2.excelimport.ImportAction">
+		<property name="model" ref="manageAppModel" />
+		<property name="importableEditor" ref="ImportExportEditor" />
+		<property name="btnName" value="导入Excel" />
+	</bean>
+
+	<!-- 导出模板到Excel -->
+	<bean id="ExportTemplate" class="nc.ui.uif2.excelimport.ExportExcelTemplateAction">
+		<property name="model" ref="manageAppModel" />
+		<property name="importableEditor" ref="ImportExportEditor" />
+		<property name="btnName" value="导出模板" />
+	</bean>
+
+	<!-- 导入项目编辑器 -->
+	<bean id="ImportExportEditor" class="nc.ui.pu.m21.importable.OrderImportableEditor">
+		<property name="billcardPanelEditor" ref="billFormEditor" />
+		<property name="addAction" ref="AddManualAction" />
+		<property name="cancelAction" ref="cancelAction" />
+		<property name="saveAction" ref="saveAction" />
+		<property name="appModel" ref="manageAppModel" />
+	</bean>
+
+	<!-- 导出数据到Excel -->
+	<bean id="ExportData" class="nc.ui.uif2.excelimport.ExportAction">
+		<property name="model" ref="manageAppModel" />
+		<property name="importableEditor" ref="ImportExportEditor" />
+		<property name="btnName" value="导出Excel" />
+	</bean>
+
+</beans>
